@@ -1,4 +1,4 @@
-public class Productos {
+public class LineaVentas {
 
     private String codigo;
     private String nombre;

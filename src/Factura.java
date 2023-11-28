@@ -6,7 +6,7 @@ public class Factura {
     private String cliente;
     private double baseInponible;
     private double total;
-    ArrayList<Productos>producto;
+    ArrayList<LineaVentas>producto;
     ArrayList<Servicios>servicio;
 
     public String getCodigo() {
