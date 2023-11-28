@@ -10,7 +10,7 @@ public class Autonomo extends Cliente{
     }
 
     public void setNombre(String nombre) {
-        nombre = nombre;
+        this.nombre = nombre;
     }
 
     public String getApellidos() {
@@ -35,5 +35,9 @@ public class Autonomo extends Cliente{
 
     public void setProvincia(String provincia) {
         this.provincia = provincia;
+    }
+    @Override
+    public String toString(){
+        return  "Nombre: " + nombre + "\nApellidos: " + apellidos + "\nDNI: " + dni + "\nProvincia: " + provincia + "\nPoblacion: " + poblacion + "\nCodigo Postal: " +codigoPostal +  "\nEmail: " + email + "\nTelefono: " + telefono + "\nCodigo De Cliente: " + codigo ;
     }
 }
