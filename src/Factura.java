@@ -5,9 +5,11 @@ public class Factura {
     private String fechaFactura;
     private String cliente;
     private double baseInponible;
+    private double ivaProducto;
     private double total;
     ArrayList<LineaVentas>producto;
     ArrayList<LineaVentas>servicio;
+
 
     public ArrayList<LineaVentas> getServicio() {
         return servicio;
@@ -57,6 +59,10 @@ public class Factura {
         this.baseInponible = baseInponible;
     }
 
+    public double getIvaProducto() {
+        return ivaProducto;
+    }
+
     public double getTotal() {
         return total;
     }
@@ -64,4 +70,25 @@ public class Factura {
     public void setTotal(double total) {
         this.total = total;
     }
+
+    public void setIvaProducto(double ivaProducto) {
+        this.ivaProducto = ivaProducto;
+    }
+
+    public void Total(){
+        if(ivaProducto == 21){
+            total = baseInponible + (baseInponible * 0.21);
+        }
+        else if(ivaProducto == 10){
+            total = baseInponible + (baseInponible * 0.10);
+        }
+        else if(ivaProducto == 4){
+            total = baseInponible + (baseInponible * 0.04);
+        }
+        else if(ivaProducto == 0){
+            total = baseInponible;
+        }
+
+    }
 }
+

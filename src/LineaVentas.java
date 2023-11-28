@@ -11,7 +11,6 @@ public class LineaVentas {
         this.nombre= nombre;
         this.precio= precio;
         this.iva= iva;
-
     }
 
     public LineaVentas(String codigo, String nombre,String marca, String modelo, double precio, double iva ){

@@ -38,6 +38,6 @@ public class Autonomo extends Cliente{
     }
     @Override
     public String toString(){
-        return  "Nombre: " + nombre + "\nApellidos: " + apellidos + "\nDNI: " + dni + "\nProvincia: " + provincia + "\nPoblacion: " + poblacion + "\nCodigo Postal: " +codigoPostal +  "\nEmail: " + email + "\nTelefono: " + telefono + "\nCodigo De Cliente: " + codigo ;
+        return  "\nDATOS DEL CLIENTE \n\nNombre: " + nombre + "\nApellidos: " + apellidos + "\nDNI: " + dni + "\nProvincia: " + provincia + "\nPoblacion: " + poblacion + "\nCodigo Postal: " +codigoPostal +  "\nEmail: " + email + "\nTelefono: " + telefono + "\nCodigo De Cliente: " + codigo ;
     }
 }
