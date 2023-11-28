@@ -4,6 +4,7 @@ public class Autonomo extends Cliente{
     private String dni;
     private String provincia;
 
+
     public String getNombre() {
         return nombre;
     }

@@ -1,9 +1,11 @@
 public class Cliente {
-    private String codigo;
-    private String codigoPostal;
-    private String poblacion;
-    private String email;
-    private String telefono;
+    public String codigo;
+    public String codigoPostal;
+    public String poblacion;
+    public String email;
+    public String telefono;
+
+
 
     public String getCodigo() {
         return codigo;

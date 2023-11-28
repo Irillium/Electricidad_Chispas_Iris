@@ -7,7 +7,23 @@ public class Factura {
     private double baseInponible;
     private double total;
     ArrayList<LineaVentas>producto;
-    ArrayList<Servicios>servicio;
+    ArrayList<LineaVentas>servicio;
+
+    public ArrayList<LineaVentas> getServicio() {
+        return servicio;
+    }
+
+    public void setServicio(ArrayList<LineaVentas> servicio) {
+        this.servicio = servicio;
+    }
+
+    public ArrayList<LineaVentas> getProducto() {
+        return producto;
+    }
+
+    public void setProducto(ArrayList<LineaVentas> producto) {
+        this.producto = producto;
+    }
 
     public String getCodigo() {
         return codigo;
