@@ -1,26 +1,10 @@
-public class LineaVentas {
-
+public class Productos {
     private String codigo;
     private String nombre;
     private String marca;
     private String modelo;
     private double precio;
     private double iva;
-    public LineaVentas(String codigo, String nombre, double precio, double iva ){
-        this.codigo= codigo;
-        this.nombre= nombre;
-        this.precio= precio;
-        this.iva= iva;
-    }
-
-    public LineaVentas(String codigo, String nombre,String marca, String modelo, double precio, double iva ){
-        this.codigo= codigo;
-        this.nombre= nombre;
-        this.marca= marca;
-        this.modelo= modelo;
-        this.precio= precio;
-        this.iva= iva;
-    }
 
     public String getCodigo() {
         return codigo;

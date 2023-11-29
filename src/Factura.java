@@ -7,26 +7,20 @@ public class Factura {
     private double baseInponible;
     private double ivaProducto;
     private double total;
-    ArrayList<LineaVentas>producto;
-    ArrayList<LineaVentas>servicio;
+    private ArrayList<Productos> productos;
+    private ArrayList<Servicios> servicios;
 
-
-    public ArrayList<LineaVentas> getServicio() {
-        return servicio;
+    public Factura() {
+        this.productos = new ArrayList<>();  // Inicializar la lista de productos
+        this.servicios = new ArrayList<>();  // Inicializar la lista de servicios
+    }
+    public void agregarProducto(Productos producto) {
+        productos.add(producto);
     }
 
-    public void setServicio(ArrayList<LineaVentas> servicio) {
-        this.servicio = servicio;
+    public void agregarServicio(Servicios servicio) {
+        servicios.add(servicio);
     }
-
-    public ArrayList<LineaVentas> getProducto() {
-        return producto;
-    }
-
-    public void setProducto(ArrayList<LineaVentas> producto) {
-        this.producto = producto;
-    }
-
     public String getCodigo() {
         return codigo;
     }
@@ -75,20 +69,40 @@ public class Factura {
         this.ivaProducto = ivaProducto;
     }
 
-    public void Total(){
-        if(ivaProducto == 21){
-            total = baseInponible + (baseInponible * 0.21);
-        }
-        else if(ivaProducto == 10){
-            total = baseInponible + (baseInponible * 0.10);
-        }
-        else if(ivaProducto == 4){
-            total = baseInponible + (baseInponible * 0.04);
-        }
-        else if(ivaProducto == 0){
-            total = baseInponible;
+    public double calcularBaseImponible() {
+        double totalProductos = 0;
+        double totalServicios = 0;
+
+        for (Productos productos : productos) {
+            totalProductos += productos.getPrecio();
         }
 
+        for (Servicios servicios : servicios) {
+            totalServicios += servicios.getPrecio();
+        }
+
+        return totalProductos + totalServicios;
     }
+
+    public double calcularTotalIVA() {
+        double ivaProductos = 0;
+        double ivaServicios = 0;
+
+        for (Productos productos : productos) {
+            ivaProductos += productos.getPrecio() * productos.getIva();
+        }
+
+        for (Servicios servicios : servicios) {
+            ivaServicios += servicios.getPrecio() * servicios.getIva();
+        }
+
+        return ivaProductos + ivaServicios;
+    }
+
+    public double calcularTotal() {
+        return calcularBaseImponible() + calcularTotalIVA();
+    }
+
+
 }
 
