@@ -3,16 +3,15 @@ import java.util.ArrayList;
 public class Factura {
     private String codigo;
     private String fechaFactura;
-    private String cliente;
+    private Cliente cliente;
     private double baseInponible;
     private double ivaProducto;
     private double total;
     private ArrayList<Productos> productos;
     private ArrayList<Servicios> servicios;
-
     public Factura() {
-        this.productos = new ArrayList<>();  // Inicializar la lista de productos
-        this.servicios = new ArrayList<>();  // Inicializar la lista de servicios
+        this.productos = new ArrayList<>();
+        this.servicios = new ArrayList<>();
     }
     public void agregarProducto(Productos producto) {
         productos.add(producto);
@@ -37,11 +36,11 @@ public class Factura {
         this.fechaFactura = fechaFactura;
     }
 
-    public String getCliente() {
+    public Cliente getCliente() {
         return cliente;
     }
 
-    public void setCliente(String cliente) {
+    public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
 

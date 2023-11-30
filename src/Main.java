@@ -49,7 +49,7 @@ public class Main {
         producto3.setPrecio(5);
         producto3.setIva(0);
 
-
+        System.out.println(producto3);
 
         Servicios sercicio1 =new Servicios();
         sercicio1.setCodigo("#35794");
@@ -72,7 +72,7 @@ public class Main {
         Factura factura01 = new Factura();
         factura01.setCodigo("#isjisj");
         factura01.setFechaFactura("29/07/2019");
-        factura01.setCliente(cliente01.toString());
+        factura01.setCliente(cliente01);
         factura01.agregarProducto(producto1);
         factura01.agregarServicio(sercicio1);
         factura01.setBaseInponible(factura01.calcularBaseImponible());
@@ -84,7 +84,7 @@ public class Main {
         Factura factura02 = new Factura();
         factura02.setCodigo("#ns98h3");
         factura02.setFechaFactura("17/10/2022");
-        factura02.setCliente(cliente02.toString());
+        factura02.setCliente(cliente02);
         factura02.agregarProducto(producto2);
         factura02.agregarProducto(producto3);
         factura02.agregarServicio(sercicio2);
@@ -93,6 +93,5 @@ public class Main {
         factura02.setIvaProducto(factura02.calcularTotalIVA());
         factura02.setTotal(factura02.calcularTotal());
 
-        System.out.println(factura02.getTotal());
-    }
+     }
 }
